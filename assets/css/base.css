@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url(_reset.css);
+@import url(_variaveis.css);
+
+/* arquivos dos estilos da página */
+@import url(contact_folder.css);
+
+:root{
+	font-family: var(--fonte-padrao);
+	box-sizing: content-box;
+}
+
+body{
+	overflow-x: hidden;
+	padding-bottom: 7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+
+	background-image: url('../img/bg-image.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: var(--color5);
+}
+
+/*classes para espaçamento*/
+.mg-bottom8{
+	margin-bottom: 8px;	
+}
+
+.mg-bottom16{
+	margin-bottom: 16px;	
+}
+
+.mg-bottom24{
+	margin-bottom: 24px;	
+}
+
+.mg-bottom32{
+	margin-bottom: 32px;	
+}
+
+.mg-bottom40{
+	margin-bottom: 40px;	
+}
+
+.mg-bottom56{
+	margin-bottom: 56px;	
+}

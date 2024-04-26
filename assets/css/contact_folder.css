@@ -1,0 +1,184 @@
+/* cabeçalhos */
+
+header{
+    display: flex;
+    width: 100%;
+    padding: 2rem 0rem 4rem 4rem;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    width: 600px;
+    line-height: 4rem;
+
+}
+
+h2{
+    font-size: 2rem;
+    width: 800px;
+    line-height: 2rem;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+.form{
+    position: relative;
+    width: 750px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+/* https://sentry.io/answers/how-to-change-the-css-background-opacity-of-an-element/ */
+/*para fazer o efeito de opaco apenas no fundo do formulário*/
+.form::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-color: var(--color4);
+    z-index: -1;
+    
+    border-radius: 1rem;
+}
+
+.form__content_line{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form__content_line.--one_element{
+    flex-direction: column;
+}
+
+.form__content_field{
+    width: 365px;
+    margin-bottom: 1.5rem;
+}
+
+.form__label{
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form__text, .form__select, .form__textarea, .form__button{
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-family: var(--fonte-padrao);
+    color: var(--color1);
+    font-weight: bold;
+}
+
+*:focus {
+    outline: none;
+}
+
+.form__text{
+    width: 317px;
+}
+
+.form__select{
+    width: 365px;
+}
+
+.form__textarea{
+    width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+.form__button{
+    width: 750px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color, background-color 0.5s;
+}
+
+.form__button:hover{
+    background-color: var(--color1);
+    color: var(--color4)
+}
+
+/* tablet */
+@media screen and (max-width: 1024px){
+    .form{
+        width: 900px;
+    }
+
+    .form__content_field{
+        width: 435px;
+        /* background-color: aqua; */
+    }
+
+    .form__text{
+        width: 380px;
+    }
+    
+    .form__select{
+        width: 430px;
+    }
+    
+    .form__textarea{
+        width: 845px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form__button{
+        width: 895px;
+        font-size: 1.25rem;
+    }
+}    
+
+/* celular */
+@media screen and (max-width: 640px){
+
+    h1{
+        font-size: 2.6rem;
+        width: 430px;
+    }
+    
+    h2{
+        font-size: 1.2rem;
+        width: 430px;
+    }
+    
+    .form{
+        width: 410px;
+        padding-bottom: 5rem;
+    }
+
+    .form__content_line{
+        flex-direction: column;
+    }
+    .form__content_field{
+        width: 410px;
+        /* background-color: aqua; */
+    }
+
+    .form__text{
+        width: 365px;
+    }
+    
+    .form__select{
+        width: 410px;
+    }
+    
+    .form__textarea{
+        width: 360px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form__button{
+        width: 410px;
+        font-size: 1.25rem;
+    }
+} 
